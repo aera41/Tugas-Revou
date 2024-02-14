@@ -1,0 +1,170 @@
+/* Base and Color Variables */
+:root {
+  --warna-utama: #f0f0f0; /* Light Gray */
+  --warna-kedua: #0099ff; /* Bright Blue */
+  --warna-ketiga: #ff6600; /* Orange */
+  --warna-keempat: #ffffff; /* White */
+  --warna-kelima: #333333; /* Dark Gray */
+}
+
+/* Google Font Import */
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and Background */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: var(--warna-utama);
+  animation: fadeIn 1s ease-in-out;
+  line-height: 1.6;
+  color: var(--warna-kelima);
+}
+
+/* Header with Flexbox for alignment and Sticky Positioning */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: var(--warna-kedua);
+  color: var(--warna-keempat);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+/* Navigation Styles with Flexbox */
+header nav ul {
+  display: flex;
+  list-style: none;
+}
+
+header nav ul li:not(:last-child) {
+  margin-right: 20px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: var(--warna-keempat);
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+  color: var(--warna-ketiga);
+}
+
+/* Main Content Styling with Max-Width and Centering */
+main {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: var(--warna-keempat);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+main h2 {
+  font-size: 1.75rem;
+  color: var(--warna-kedua);
+  margin-bottom: 1rem;
+}
+
+main p {
+  margin-bottom: 1rem;
+}
+
+/* List and Gallery Styles */
+main ul {
+  list-style: disc inside;
+  padding-left: 20px;
+}
+
+main .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* Form and Footer Styles */
+main form {
+  display: flex;
+  flex-direction: column;
+}
+
+main input[type="submit"] {
+  background-color: var(--warna-kedua);
+  color: var(--warna-keempat);
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+main input[type="submit"]:hover {
+  background-color: var(--warna-ketiga);
+}
+
+footer {
+  padding: 20px;
+  background-color: var(--warna-kedua);
+  color: var(--warna-keempat);
+  text-align: center;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  header nav ul li a {
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .hamburger {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+  }
+
+  .hamburger span {
+    height: 3px;
+    background: var(--warna-keempat);
+  }
+
+  main {
+    margin: 20px;
+  }
+
+  main .gallery {
+    grid-template-columns: 1fr; /* Adjust for mobile view */
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
