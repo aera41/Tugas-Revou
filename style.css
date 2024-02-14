@@ -19,14 +19,14 @@
 
 /* Body and Background */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Roboto', sans-serif;
   background-color: var(--warna-utama);
-  animation: fadeIn 1s ease-in-out;
-  line-height: 1.6;
   color: var(--warna-kelima);
+  line-height: 1.6;
+  animation: fadeIn 1s ease-in-out;
 }
 
-/* Header with Flexbox for alignment and Sticky Positioning */
+/* Header with Flexbox for Alignment and Sticky Positioning */
 header {
   display: flex;
   align-items: center;
@@ -47,6 +47,7 @@ header h1 {
 header nav ul {
   display: flex;
   list-style: none;
+  transition: transform 0.3s ease;
 }
 
 header nav ul li:not(:last-child) {
@@ -57,7 +58,6 @@ header nav ul li a {
   text-decoration: none;
   color: var(--warna-keempat);
   font-weight: bold;
-  transition: color 0.3s ease;
 }
 
 header nav ul li a:hover,
@@ -65,7 +65,23 @@ header nav ul li a.active {
   color: var(--warna-ketiga);
 }
 
-/* Main Content Styling with Max-Width and Centering */
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  background-color: var(--warna-keempat);
+}
+
+/* Main Content Styling */
 main {
   max-width: 1200px;
   margin: 40px auto;
@@ -74,97 +90,42 @@ main {
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-main h2 {
-  font-size: 1.75rem;
-  color: var(--warna-kedua);
-  margin-bottom: 1rem;
-}
-
-main p {
-  margin-bottom: 1rem;
-}
-
-/* List and Gallery Styles */
-main ul {
-  list-style: disc inside;
-  padding-left: 20px;
-}
-
-main .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-}
-
-/* Form and Footer Styles */
-main form {
-  display: flex;
-  flex-direction: column;
-}
-
-main input[type="submit"] {
-  background-color: var(--warna-kedua);
-  color: var(--warna-keempat);
-  padding: 10px;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-main input[type="submit"]:hover {
-  background-color: var(--warna-ketiga);
-}
-
-footer {
-  padding: 20px;
-  background-color: var(--warna-kedua);
-  color: var(--warna-keempat);
-  text-align: center;
-}
-
 /* Responsive Design */
 @media screen and (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: center;
+  .hamburger {
+    display: flex;
   }
 
   header nav ul {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
     flex-direction: column;
-    width: 100%;
+    align-items: center;
+    background-color: var(--warna-kedua);
+    display: none;
   }
 
-  header nav ul li a {
-    padding: 10px;
-    text-align: center;
-    width: 100%;
-  }
-
-  .hamburger {
+  /* Display navigation when hamburger is active */
+  header nav ul.active {
     display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    width: 30px;
-    height: 21px;
-    cursor: pointer;
+    animation: slideIn 0.3s ease-out forwards;
   }
 
-  .hamburger span {
-    height: 3px;
-    background: var(--warna-keempat);
-  }
-
-  main {
-    margin: 20px;
-  }
-
-  main .gallery {
-    grid-template-columns: 1fr; /* Adjust for mobile view */
+  header nav ul li {
+    text-align: center;
+    padding: 10px 0;
   }
 }
 
-/* Animation */
+/* Animations */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }
