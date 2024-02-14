@@ -1,30 +1,30 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bunda PAUD Kota Surabaya</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <!-- Sisipkan file CSS Anda di sini -->
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Bunda PAUD Kota Surabaya</h1>
-    <nav aria-label="Menu Utama">
-      <div class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <ul>
-        <li><a href="#profil">Profil</a></li>
-        <li><a href="#program">Program</a></li>
-        <li><a href="#galeri">Galeri</a></li>
-        <li><a href="#kontak">Kontak</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        <div class="logo">
+            <h1>Bunda PAUD Kota Surabaya</h1>
+        </div>
+        <div class="hamburger" id="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#profil">Profil</a></li>
+                <li><a href="#program">Program</a></li>
+                <li><a href="#galeri">Galeri</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
   <main>
     <section id="profil">
       <h2>Profil Bunda PAUD Kota Surabaya</h2>
@@ -43,13 +43,23 @@
     </section>
     <section id="galeri">
         <h2>Galeri Bunda PAUD Kota Surabaya</h2>
-      
         <div class="gallery">
-          <img src="https://seputarindonesia.net/wp-content/uploads/2023/09/f8b9b4c7-49da-4ba6-9c3a-a462aaf1b2f9_1693606099817.jpeg" alt="Bunda PAUD bersama anak-anak PAUD" width="300" height="200">
-          <img src="https://www.kabarjagad.id/wp-content/uploads/2022/09/IMG_2459.jpg" alt="Bunda PAUD bersama Guru-Guru PAUD" width="300" height="200">
-          <img src="https://cdn.rri.co.id/berita/19/images/1684893406059-IMG_5601/1684893406059-IMG_5601.jpg" alt="Bunda PAUD bersama dinas terkait" width="300" height="200">
-          <img src="https://surabaya.go.id/uploads/pictures/2023/9/78128/original_IMG_6485.jpg?1693877867" alt="Bunda PAUD bersama Anak-Anak SD" width="300" height="200">
-        </div>
+          <div class="gallery-item">
+              <img src="https://seputarindonesia.net/wp-content/uploads/2023/09/f8b9b4c7-49da-4ba6-9c3a-a462aaf1b2f9_1693606099817.jpeg" alt="Bunda PAUD bersama anak-anak PAUD">
+              <p class="gallery-item-text">Bunda PAUD bersama anak-anak PAUD</p>
+          </div>
+          <div class="gallery-item">
+            <img src="https://www.kabarjagad.id/wp-content/uploads/2022/09/IMG_2459.jpg" alt="Bunda PAUD bersama Guru-Guru PAUD">
+            <p class="gallery-item-text">Bunda PAUD bersama Guru-Guru PAUD</p>
+          </div>
+          <div class="gallery-item">
+          <img src="https://cdn.rri.co.id/berita/19/images/1684893406059-IMG_5601/1684893406059-IMG_5601.jpg" alt="Bunda PAUD bersama dinas terkait">
+          <p class="gallery-item-text">Bunda PAUD bersama dinas terkait</p>
+          </div>
+          <div class="gallery-item">
+          <img src="https://surabaya.go.id/uploads/pictures/2023/9/78128/original_IMG_6485.jpg?1693877867" alt="Bunda PAUD bersama Anak-Anak SD">
+          <p class="gallery-item-text">Bunda PAUD bersama Anak-Anak SD</p>
+      </div>
       </section>
       <section id="kontak">
         <h2>Kontak Bunda PAUD Kota Surabaya</h2>
