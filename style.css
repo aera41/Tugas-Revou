@@ -22,8 +22,8 @@ body {
   font-family: 'Roboto', sans-serif;
   background-color: var(--warna-utama);
   color: var(--warna-kelima);
-  line-height: 1.6;
   animation: fadeIn 1s ease-in-out;
+  line-height: 1.6;
 }
 
 /* Header with Flexbox for Alignment and Sticky Positioning */
@@ -47,7 +47,6 @@ header h1 {
 header nav ul {
   display: flex;
   list-style: none;
-  transition: transform 0.3s ease;
 }
 
 header nav ul li:not(:last-child) {
@@ -58,27 +57,12 @@ header nav ul li a {
   text-decoration: none;
   color: var(--warna-keempat);
   font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 header nav ul li a:hover,
 header nav ul li a.active {
   color: var(--warna-ketiga);
-}
-
-/* Hamburger Menu */
-.hamburger {
-  display: none;
-  cursor: pointer;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 21px;
-}
-
-.hamburger span {
-  display: block;
-  height: 3px;
-  background-color: var(--warna-keempat);
 }
 
 /* Main Content Styling */
@@ -87,45 +71,121 @@ main {
   margin: 40px auto;
   padding: 20px;
   background-color: var(--warna-keempat);
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+main h2 {
+  font-size: 1.75rem;
+  color: var(--warna-kedua);
+  margin-bottom: 1rem;
+}
+
+main p {
+  margin-bottom: 1rem;
+}
+
+/* Flexbox Gallery */
+main .gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.gallery-item {
+  flex: 1 1 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--warna-keempat);
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.gallery-item-text {
+  font-size: 16px;
+  color: var(--warna-kelima);
+  text-align: center;
+}
+
+/* Form and Footer Styles */
+main form {
+  display: flex;
+  flex-direction: column;
+}
+
+main input[type="submit"] {
+  background-color: var(--warna-kedua);
+  color: var(--warna-keempat);
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+main input[type="submit"]:hover {
+  background-color: var(--warna-ketiga);
+}
+
+footer {
+  padding: 20px;
+  background-color: var(--warna-kedua);
+  color: var(--warna-keempat);
+  text-align: center;
 }
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
-  .hamburger {
-    display: flex;
+  header {
+    flex-direction: column;
+    align-items: center;
   }
 
   header nav ul {
-    position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
     flex-direction: column;
-    align-items: center;
-    background-color: var(--warna-kedua);
-    display: none;
+    width: 100%;
   }
 
-  /* Display navigation when hamburger is active */
-  header nav ul.active {
-    display: flex;
-    animation: slideIn 0.3s ease-out forwards;
-  }
-
-  header nav ul li {
+  header nav ul li a {
+    padding: 10px;
     text-align: center;
-    padding: 10px 0;
+    width: 100%;
+  }
+
+  .hamburger {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+  }
+
+  .hamburger span {
+    height: 3px;
+    background: var(--warna-keempat);
+  }
+
+  main {
+    margin: 20px;
+  }
+
+  main .gallery {
+    justify-content: space-around;
   }
 }
 
-/* Animations */
+/* Animation */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
-}
-
-@keyframes slideIn {
-  from { transform: translateY(-20px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
 }
