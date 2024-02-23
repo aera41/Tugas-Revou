@@ -11,25 +11,42 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
- <header>
-  <div class="logo">
-    <h2>Profil Bunda PAUD Kota Surabaya</h2>
-  </div>
-  <div class="hamburger" id="hamburger-menu">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
   <nav>
-    <ul>
-      <li><a href="#profil">Profil</a></li>
-      <li><a href="#program">Program</a></li>
-      <li><a href="#galeri">Galeri</a></li>
-      <li><a href="#kontak">Kontak</a></li>
-    </ul>
+    <span class="mobile">
+        <img src="https://user-images.githubusercontent.com/2970318/209647125-dc41103d-c545-4e2e-b89b-099fbfcde702.svg" alt="Hamburger Icon">
+    </span>
+    <span class="relative-container">
+        <img src="https://user-images.githubusercontent.com/2970318/209562035-bdbfb418-b564-4676-91bc-286fa03ca4d8.png" alt="Penguin Fan Club Icon">
+        <b>Penguin Club</b>
+    </span>
+    <span id="dark-mode-switch">
+        <p>Dark Mode</p>
+        <label class="switch">
+            <input id="checkbox-dark-mode" onchange="toggleDarkMode()" type="checkbox">
+            <span class="slider round"></span>
+        </label>
+    </span>
   </nav>
-</header>
- <main>
+  <header>
+    <div class="logo">
+        <h2>Profil Bunda PAUD Kota Surabaya</h2>
+    </div>
+    <input type="checkbox" id="nav-toggle" class="nav-toggle">
+    <label for="nav-toggle" class="hamburger" id="hamburger-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+    <nav>
+        <ul>
+            <li><a href="#profil">Profil</a></li>
+            <li><a href="#program">Program</a></li>
+            <li><a href="#galeri">Galeri</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+        </ul>
+    </nav>
+  </header>
+  <main>
   <section id="profil">
    <h2>Profil Bunda PAUD Kota Surabaya</h2>
    <p>Bunda PAUD Kota Surabaya adalah Rini Indriyani, istri dari Wali Kota Surabaya, Eri Cahyadi. Beliau dilantik menjadi Bunda PAUD Kota Surabaya pada tanggal 20 September 2021 oleh Gubernur Jawa Timur, Khofifah Indar Parawansa. Beliau memiliki visi untuk menciptakan anak-anak Surabaya yang hebat dengan mengembangkan PAUD holistik integratif yang meliputi aspek kesehatan, pendidikan, pola asuh, dan lingkungan.</p>
