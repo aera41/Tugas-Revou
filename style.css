@@ -5,10 +5,14 @@
   --warna-ketiga: #ff6600; /* Orange */
   --warna-keempat: #ffffff; /* White */
   --warna-kelima: #333333; /* Dark Gray */
+  --font-utama: 'Roboto', sans-serif;
 }
 
-/* Google Font Import */
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+/* Custom Font Import */
+@font-face {
+  font-family: 'Roboto';
+  src: url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+}
 
 /* Reset */
 * {
@@ -19,8 +23,9 @@
 
 /* Body and Background */
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: var(--warna-utama);
+  font-family: var(--font-utama);
+  background-image: url('background.jpg');
+  background-size: cover;
   color: var(--warna-kelima);
   animation: fadeIn 1s ease-in-out;
   line-height: 1.6;
@@ -41,6 +46,7 @@ header {
 
 header h1 {
   font-size: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* Navigation Styles with Flexbox */
@@ -53,7 +59,6 @@ header nav ul {
 header nav ul li:not(:last-child) {
   margin-right: 20px;
 }
-
 
 header nav ul li a {
   text-decoration: none;
@@ -99,6 +104,9 @@ header nav ul li a.active {
 
 /* Main Content Styling */
 main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
   max-width: 1200px;
   margin: 40px auto;
   padding: 20px;
@@ -110,6 +118,7 @@ main h2 {
   font-size: 1.75rem;
   color: var(--warna-kedua);
   margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 main p {
@@ -241,7 +250,6 @@ footer {
     padding: 10px 0;
   }
 
-
 .nav-toggle:checked + label + nav ul {
   display: flex;
 }
@@ -261,4 +269,41 @@ transition: all 0.3s ease;
 @keyframes slideIn {
   from { transform: translateY(-20px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
+}
+
+/* Night Mode */
+body.night-mode {
+  background-color: var(--warna-kelima);
+  color: var(--warna-keempat);
+}
+
+header.night-mode {
+  background-color: var(--warna-ketiga);
+}
+
+main.night-mode {
+  background-color: var(--warna-kelima);
+}
+
+footer.night-mode {
+  background-color: var(--warna-ketiga);
+}
+
+/* Carousel */
+.carousel {
+  display: flex;
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.carousel img {
+  flex: 0 0 auto;
+  width: 100%;
+  height: auto;
+  scroll-snap-align: start;
+}
+
+.carousel img:last-child {
+  margin-right: 0;
 }
