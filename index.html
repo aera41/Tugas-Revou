@@ -109,15 +109,35 @@
   <p>&copy; 2024 Bunda PAUD Kota Surabaya. All rights reserved.</p>
  </footer>
 <script>
-  document.addEventListener('DOMContentLoaded', (event) => {
-    if (localStorage.getItem('navToggle') === 'true') {
-      document.getElementById('nav-toggle').checked = true;
-    }
-     
-    document.getElementById('nav-toggle').addEventListener('change', (e) => {
-      localStorage.setItem('navToggle', e.target.checked);
-    });
-  });
+// Night Mode and Day Mode
+const toggleButton = document.querySelector('.toggle-button');
+const bodyElement = document.querySelector('body');
+
+toggleButton.addEventListener('click', function() {
+  bodyElement.classList.toggle('night-mode');
+});
+// Carousel
+const carousel = document.querySelector('.carousel');
+let isDown = false;
+let startX;
+let scrollLeft;
+
+carousel.addEventListener('mousedown', (e) => {
+  isDown = true;
+  carousel.classList.add('active');
+  startX = e.pageX - carousel.offsetLeft;
+  scrollLeft = carousel.scrollLeft;
+});
+
+carousel.addEventListener('mouseleave', () => {
+  isDown = false;
+  carousel.classList.remove('active');
+});
+
+carousel.addEventListener('mouseup', () => {
+  isDown = false;
+  carousel.classList.remove('active');
+});
 </script>
 </body>
 </html>
