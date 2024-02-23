@@ -2,14 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="description" content="Profil Bunda PAUD Kota Surabaya, program, galeri, dan kontak.">
+    <meta name="keywords" content="Bunda PAUD, Pendidikan Anak Usia Dini, Surabaya, PAUD Surabaya">
+    <meta name="author" content="Pemerintah Kota Surabaya">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profil Bunda PAUD Kota Surabaya</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
   <header>
     <div class="logo">
-        <h2>Website Resmi Bunda PAUD Kota Surabaya</h2>
+        <h2>Profil Bunda PAUD Kota Surabaya</h2>
     </div>
     <input type="checkbox" id="nav-toggle" class="nav-toggle">
     <label for="nav-toggle" class="hamburger" id="hamburger-menu">
@@ -62,6 +66,10 @@
           <p class="gallery-item-text">Bunda PAUD bersama Anak-Anak SD</p>
       </div>
       </section>
+       <section id="video">
+      <h2>Video Edukasi PAUD</h2>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/O0PK97x9lkg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </section>
       <section id="kontak">
         <h2>Kontak Bunda PAUD Kota Surabaya</h2>
         <form>
@@ -84,5 +92,16 @@
   <footer>
     <p>&copy; 2024 Bunda PAUD Kota Surabaya. All rights reserved.</p>
   </footer>
+<script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+        if (localStorage.getItem('navToggle') === 'true') {
+            document.getElementById('nav-toggle').checked = true;
+        }
+        
+        document.getElementById('nav-toggle').addEventListener('change', (e) => {
+            localStorage.setItem('navToggle', e.target.checked);
+        });
+    });
+</script>
 </body>
 </html>
