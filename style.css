@@ -105,9 +105,8 @@ header nav ul li a.active {
 /* Main Content Styling */
 main {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
   gap: 20px;
-  max-width: 1200px;
   margin: 40px auto;
   padding: 20px;
   background-color: var(--warna-keempat);
@@ -147,8 +146,9 @@ main .gallery {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.gallery-item img {
-  width: 100%;
+.gallery-item img { 
+  width: 100%; 
+  height: auto;
   grid-row: 1;
   border-radius: 5px;
 }
