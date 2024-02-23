@@ -24,7 +24,7 @@
 /* Body and Background */
 body {
   font-family: var(--font-utama);
-  background-image: url('background.jpg');
+  background-image: url('https://www.istockphoto.com/id/foto/lanskap-gunung-gm517188688-89380423');
   background-size: cover;
   color: var(--warna-kelima);
   animation: fadeIn 1s ease-in-out;
