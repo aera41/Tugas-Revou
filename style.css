@@ -1,17 +1,22 @@
 @font-face {
-  font-family: Jakarta-Sans;
-  src: url(fonts/PlusJakartaSans-Regular.ttf);
+  font-family: Poppins;
+  src: url(fonts/Poppins-Regular.ttf);
 }
 
 @font-face {
-  font-family: Jakarta-Sans;
-  src: url(fonts/PlusJakartaSans-Bold.ttf);
+  font-family: Poppins;
+  src: url(fonts/Poppins-Bold.ttf);
   font-weight: bold;
 }
 
 body {
-  font-family: Jakarta-Sans, "Open Sans", sans-serif;
-  margin: 0;
+    font-family: 'Poppins', sans-serif; /* Use Poppins as the primary font */
+    margin: 0;
+}
+
+section h2 {
+  font-weight: bold; /* Matches Poppins Bold weight */
+  text-align: center;
 }
 
 .dark-mode {
