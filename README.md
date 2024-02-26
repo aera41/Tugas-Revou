@@ -25,3 +25,5 @@ Website ini dibuat menggunakan teknologi web berikut:
 - HTML, sebagai bahasa markup untuk membuat struktur website.
 - CSS, sebagai bahasa style sheet untuk membuat tampilan website.
 https://aera41.github.io/Tugas-Revou/
+![Tanpa judul (Logo)](https://github.com/aera41/Tugas-Revou/assets/157816177/3d58940f-82c9-474e-8fec-945cb9a2d439)
+
