@@ -26,4 +26,8 @@ Website ini dibuat menggunakan teknologi web berikut:
 - CSS, sebagai bahasa style sheet untuk membuat tampilan website.
 https://aera41.github.io/Tugas-Revou/
 ![Tanpa judul (Logo)](https://github.com/aera41/Tugas-Revou/assets/157816177/3d58940f-82c9-474e-8fec-945cb9a2d439)
+![Snapinsta app_428684315_18244130713220382_8749612481381317728_n_1080](https://github.com/aera41/Tugas-Revou/assets/157816177/1a68fc81-0394-454e-8100-62a52755dbd9)
+![Snapinsta app_425594356_378810424783049_3448435904479481650_n_1080](https://github.com/aera41/Tugas-Revou/assets/157816177/184fbcf9-16c7-4539-8958-659691ba409f)
+![Snapinsta app_428667775_18244130650220382_1817461345937811083_n_1080](https://github.com/aera41/Tugas-Revou/assets/157816177/fe849aa7-dd6c-4777-a110-e6783d88255b)
 
+![Snapinsta app_428706756_18244130704220382_7084672987995680037_n_1080](https://github.com/aera41/Tugas-Revou/assets/157816177/e5677c6c-c542-4cda-9c67-daa224d3d1c1)
